@@ -14,18 +14,35 @@
 <body>
     <div class="container">
         <h3 class="header">Pizza Inn</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="./images/pizza.jpeg" alt="">
+        <div class="row ">
+            <div class="col-md-6">
+                <img src="./images/pizza.jpeg" alt="" class="image">
             </div>
             <div class="col-md-4">
-                <h4>Menu</h4>
+                <div class="card">
+                    <div class="image-card">
+                        <img src="./images/menuPizza.jpeg" alt="" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                      <strong><h3 class="card-title header">Menu</h3></strong> 
+                      <p class="card-text">
+                          <ul>
+                              <li>small: 300</li>
+                              <li>Medium: 600</li>
+                              <li>Large: 900</li>
+                              <li>Crust: 100</li>
+                              <li>Toppings: 120</li>
+                              <li>Delivery: 200 <small>(optional)</small> </li>
+                          </ul>
+                      </p> 
+                    </div>
+                </div>
             </div>
         </div>
         <form action="">
 
-        <div class="row">
-            <div class="col-md-4">
+            <div class="row mt-5">
+                <div class="col-md-5">
                     <label for="pizza-sizza">Pizza Size</label>
                     <select name="pizza-size" id="pizza-size" class="form-control">
                         <option value="">Select Size</option>
@@ -33,18 +50,18 @@
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                     </select>
+                </div>
+                <div class="col-md-5">
+                    <label for="pizza-crust">Crust</label>
+                    <select name="crust" id="crust" class="form-control">
+                        <option value="">Select Crust</option>
+                        <option value="crispy">Crispy</option>
+                        <option value="stuffed">Stuffed</option>
+                        <option value="glutte">Glutte-Free</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-md-4">
-                <label for="pizza-crust">Crust</label>
-                <select name="crust" id="crust" class="form-control">
-                    <option value="">Select Crust</option>
-                    <option value="crispy">Crispy</option>
-                    <option value="stuffed">Stuffed</option>
-                    <option value="glutte">Glutte-Free</option>
-                </select>
-            </div>
-        </div>
-    </form>
+        </form>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
