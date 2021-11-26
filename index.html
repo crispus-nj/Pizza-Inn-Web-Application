@@ -12,7 +12,33 @@
 </head>
 
 <body>
-    <h1>Pizza Inn</h1>
+    <div class="container">
+        <h3 class="header">Pizza Inn</h3>
+        <form action="">
+
+        <div class="row">
+            <div class="col-md-4">
+                    <label for="pizza-sizza">Pizza Size</label>
+                    <select name="pizza-size" id="pizza-size" class="form-control">
+                        <option value="">Select Size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+            </div>
+            <div class="col-md-4">
+                <label for="pizza-crust">Crust</label>
+                <select name="crust" id="crust" class="form-control">
+                    <option value="">Select Crust</option>
+                    <option value="crispy">Crispy</option>
+                    <option value="stuffed">Stuffed</option>
+                    <option value="glutte">Glutte-Free</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
