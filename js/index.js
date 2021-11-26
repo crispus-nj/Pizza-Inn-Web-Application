@@ -9,28 +9,28 @@ class Pizza {
   getTotalPrice(crust, toppings, quantity) {
     if (this.pizzaSize == "small") {
       if(this.delivery == true){
-        return this.price += crust + toppings + 300 + 200
+        return (this.price += crust + toppings + 300 + 200) * quantity
       } else {
-        return this.price += crust + toppings + 300
+        return (this.price += crust + toppings + 300) * quantity
       }
     }
     else if (this.pizzaSize == "medium"){
-      if(this.delivery == true){
-        return this.price += crust + toppings + 500 + 200
+      if(this.delivery == true){ 
+        return (this.price += crust + toppings + 500 + 200) * quantity
       }else {
-        return this.price += crust + toppings + 500
+        return (this.price += crust + toppings + 500) * quantity
       }
     }else {
       if(this.delivery == true){
-        this.price += crust + toppings + 800 + 200
+        return (this.price += crust + toppings + 800 + 200) * quantity
       }else {
-        return this.price += crust + toppings + 800
+        return (this.price += crust + toppings + 800) * quantity
       }
     }
   }
 }
 
-let pizza = new Pizza("Crispus Njenga", "medium", true);
+let pizza = new Pizza("Crispus Njenga", "medium", false);
 console.log(`Customer Name: ${pizza.customerName}
 Pizza Size: ${pizza.pizzaSize}
 Total Price: ${pizza.getTotalPrice(200, 100, 2)}`);
