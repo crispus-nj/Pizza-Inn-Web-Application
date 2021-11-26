@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-primary bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-primary bg-dark fixed-top">
         <img src="./images/pizza.jpeg" alt="" class="nav-brand brand-image">
         <!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#pizza-nav">
             <span class="navbar-toggler-icon"></span>
@@ -26,8 +26,8 @@
                     <a href="#" class="nav-link">Cart</a>
                 </li>
             </ul>
-        </div> 
-    </nav>  
+        </div>
+    </nav>
     <div class="container">
         <!-- header -->
         <h3 class="header">Pizza Inn</h3>
@@ -59,8 +59,19 @@
         </div>
         <!-- form actions -->
         <form action="">
-            <div class="row d-flex justify-content-center align-items-center  mt-5">
-                <div class="col-md-5">
+            <div class="row">
+               
+            </div>
+            <div class="row d-flex justify-content-center align-items-center  mt-3">
+                <div class="col-md-5 mt-2">
+                    <label for="name" class="header">Name</label>
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="col-md-5 mt-2">
+                    <label for="email" class="header">Email</label>
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-md-5 mt-2">
                     <label for="pizza-sizza" class="header">Pizza Size</label>
                     <select name="pizza-size" id="pizza-size" class="form-control">
                         <option value="">Select Size</option>
@@ -69,7 +80,7 @@
                         <option value="large">Large</option>
                     </select>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 mt-2">
                     <label for="pizza-crust" class="header">Crust</label>
                     <select name="crust" id="crust" class="form-control">
                         <option value="">Select Crust</option>

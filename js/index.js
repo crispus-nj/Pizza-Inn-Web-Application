@@ -1,7 +1,8 @@
 // class Pizza
 class Pizza {
-  constructor(customerName, pizzaSize, delivery = Boolean, price = 0) {
+  constructor(customerName, customerEmail,pizzaSize, delivery = Boolean, price = 0) {
     this.customerName = customerName;
+    this.customerEmail = customerEmail
     this.pizzaSize = pizzaSize;
     this.delivery = delivery;
     this.price = price;
@@ -30,7 +31,8 @@ class Pizza {
   }
 }
 
-let pizza = new Pizza("Crispus Njenga", "medium", false);
+let pizza = new Pizza("Crispus Njenga","engineer@gmail.com" ,"medium", true);
 console.log(`Customer Name: ${pizza.customerName}
+customer Email: ${pizza.customerEmail}
 Pizza Size: ${pizza.pizzaSize}
 Total Price: ${pizza.getTotalPrice(200, 100, 2)}`);
