@@ -8,12 +8,24 @@ class Pizza {
   }
   getTotalPrice(crust, toppings, quantity) {
     if (this.pizzaSize == "small") {
-      return this.price += crust + toppings + 300
+      if(this.delivery == true){
+        return this.price += crust + toppings + 300 + 200
+      } else {
+        return this.price += crust + toppings + 300
+      }
     }
     else if (this.pizzaSize == "medium"){
-      return this.price += crust + toppings + 500
+      if(this.delivery == true){
+        return this.price += crust + toppings + 500 + 200
+      }else {
+        return this.price += crust + toppings + 500
+      }
     }else {
-      return this.price += crust + toppings + 800
+      if(this.delivery == true){
+        this.price += crust + toppings + 800 + 200
+      }else {
+        return this.price += crust + toppings + 800
+      }
     }
   }
 }
