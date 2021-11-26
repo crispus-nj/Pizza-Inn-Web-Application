@@ -7,3 +7,7 @@ class Pizza {
     this.price = price;
   }
 }
+
+let pizza = new Pizza("Crispus Njenga", "small", true)
+console.log(`Customer Name: ${pizza.customerName}
+Pizza Size: ${pizza.pizzaSize}`)
