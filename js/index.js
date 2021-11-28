@@ -8,6 +8,7 @@ let btn = document.querySelector(".btn-danger");
 let price = document.getElementsByClassName("price");
 let crustPizza = document.getElementById("crust");
 let numQuantityItems = document.getElementById('numQuantity')
+let display = document.getElementById("confirm")
 // console.log(price)
 
 // globa variable with values from the input fields
@@ -31,35 +32,35 @@ class Pizza {
   getTotalPrice(crust, toppings, quantity) {
     if (this.pizzaSize == "small") {
       if (this.delivery == true) {
-        return (this.price += crust + toppings + 300 + 200) * quantity;
+        return (this.price += crust + toppings + 300 + 200 -300) * quantity;
       } else {
-        return (this.price += crust + toppings + 300) * quantity;
+        return (this.price += crust + toppings + 300 - 300) * quantity;
       }
     } else if (this.pizzaSize == "medium") {
       if (this.delivery == true) {
-        return (this.price += crust + toppings + 500 + 200) * quantity;
+        return (this.price += crust + toppings + 500 + 200 - 500) * quantity;
       } else {
-        return (this.price += crust + toppings + 500) * quantity;
+        return (this.price += crust + toppings + 500 - 500) * quantity;
       }
     } else {
       if (this.delivery == true) {
-        return (this.price += crust + toppings + 800 + 200) * quantity;
+        return (this.price += crust + toppings + 800 + 200 - 800) * quantity;
       } else {
-        return (this.price += crust + toppings + 800) * quantity;
+        return (this.price += crust + toppings + 800 - 800) * quantity;
       }
     }
   }
-  quantityChange(event) {
-    let inputNum = document.getElementById("numQuantity");
-    let input = inputNum.value;
-    input = event.target;
-    console.log(input)
-    // event.target
-    if (isNaN(input) || input <= 0) {
-      input = 1;
-    }
-    this.getTotalPrice();
-  }
+  // quantityChange(event) {
+  //   let inputNum = document.getElementById("numQuantity");
+  //   let input = inputNum.value;
+  //   input = event.target;
+  //   console.log(input)
+  //   // event.target
+  //   if (isNaN(input) || input <= 0) {
+  //     input = 1;
+  //   }
+  //   this.getTotalPrice();
+  // }
 }
 btn.addEventListener("click", function () {
   let name = nameCustomer.value;
@@ -68,10 +69,7 @@ btn.addEventListener("click", function () {
   let crust = crustPizza.value;
   let deliveryitem = deliveryItems.checked;
   let numQuantityItem = numQuantityItems.value
-  // let deliveryitemClicked = Boolean.prototype.toString()
-  // console.log(deliveryitemClicked)
-  // deliveryitem= new Boolean(deliveryitem) 
-  // objects of the class
+  console.log(display)
   let pizza = new Pizza(name, email, size, crust, deliveryitem);
   // output
   console.log(`Customer Name: ${pizza.customerName}
@@ -80,7 +78,53 @@ btn.addEventListener("click", function () {
   Pizza Crust: ${pizza.pizzaCrust}
   Total Price: ${pizza.getTotalPrice(200, 100, numQuantityItem)}
   Delivery: ${deliveryitem}`);
-  
+ 
+  display.innerHTML = `<div class="modal" id="confimOrderModal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title text-danger" id="modal-header">Confirm Your Order</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row d-flex justify-content-center align-items-center mt-3">
+                  <div class="col-md-4">
+                      <h5><span style="font-weight: bold;">Customer Name:</span> ${pizza.customerName}</h5>
+                  </div>
+              </div>
+              <div class="row d-flex justify-content-center align-items-center mt-3">
+                  <div class="col-md-4">
+                      <h5> <span style="font-weight: bold;">Customer Email:</span> ${pizza.customerEmail} </h4>
+                  </div>
+              </div>
+              <div class="row d-flex justify-content-center align-items-center mt-3">
+                  <div class="col-md-4">
+                      <h5><span  style="font-weight: bold;">Size of the Pizza:</span>${pizza.pizzaSize}</h5>
+                  </div>
+              </div>
+              <div class="row d-flex justify-content-center align-items-center mt-3">
+                  <div class="col-md-4">
+                      <h5><span  style="font-weight: bold;">Pizza Crust:</span>${pizza.pizzaCrust}</h5>
+                  </div>
+              </div>
+              <div class="row d-flex justify-content-center align-items-center mt-3">
+                  <div class="col-md-4">
+                      <h5><span  style="font-weight: bold;">Delivery:</span>${deliveryitem}</h5>
+                  </div>
+              </div>
+              <div class="row d-flex justify-content-center align-items-center mt-3">
+                  <div class="col-md-4">
+                      <h4><span style="font-weight: bold; color: brown;">Total price:</span>${pizza.getTotalPrice(200, 100, numQuantityItem)}</h4>
+                  </div>
+              </div>
+
+              <div class="modal-buttons d-flex justify-content-center align-items-center mt-3" id="confirm-buttons">
+                  <button type="submit" class="btn btn-success button-confirm">Confirm</button>
+                  <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>`
   // console.log(pizza.quantityChange(numQuantityItem))
 });
 
