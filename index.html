@@ -107,15 +107,37 @@
                     <label for="delivery" class="form-chak-label">Delivery</label>
                 </div>
             </div>
-            <div class="col-md-1">
+            <!-- <div class="col-md-1">
                 <label for="price" class="header1" style="color: brown;">Price</label>
                 <h5>Ksh <span class="price">0</span></h5>
-                <!-- <span>0</span> -->
-            </div>
+            </div> -->
         </div>
         <div class="row">
             <div class="col-md-12 mt-3 mb-3">
-                <button type="submit" class="btn btn-danger">Proceed To Checkout</button>
+                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#confimOrderModal">Proceed To Checkout</button>
+            </div>
+        </div>
+        <!-- confirm order modal -->
+        <div class="modal" id="confimOrderModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger" id="modal-header">Confirm Your Order</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./images/svgPerson.png" alt="">: <span>Crispus Njenga</span>
+                        <img src="./images/svgEmail.png" alt="">: <span>Njengacri23676@Gmail.com</span>
+                        <img src="./images/menuPizza.jpeg" alt="">:: 
+                        <img src="./images/pizzaCrustImage.jpg" alt="">
+                        <h4>Delivery:</h4> <span>True</span>
+                        <h4>Total Price:</h4> <span>0</span>
+
+                        <div class="modal-buttons d-flex justify-content-space-evenly align-items-center">
+                            <button type="submit" class="btn btn-success button-confirm">Confirm</button>
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
