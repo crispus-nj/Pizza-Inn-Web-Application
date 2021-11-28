@@ -44,3 +44,8 @@ li {
     text-align: center;
     font-weight: 2rem;
 }
+#confirm-buttons button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
