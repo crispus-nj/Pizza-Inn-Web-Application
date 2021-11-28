@@ -6,7 +6,8 @@ let sizePizza = document.getElementById("quantity");
 let deliveryItems = document.getElementById("delivery");
 let btn = document.querySelector(".btn-danger");
 let price = document.getElementsByClassName("price");
-let crustPizza = document.getElementById('crust')
+let crustPizza = document.getElementById("crust");
+let numQuantityItems = document.getElementById('numQuantity')
 // console.log(price)
 
 // globa variable with values from the input fields
@@ -52,6 +53,7 @@ class Pizza {
     let inputNum = document.getElementById("numQuantity");
     let input = inputNum.value;
     input = event.target;
+    console.log(input)
     // event.target
     if (isNaN(input) || input <= 0) {
       input = 1;
@@ -63,12 +65,22 @@ btn.addEventListener("click", function () {
   let name = nameCustomer.value;
   let email = emailCustomer.value;
   let size = sizePizza.value;
-  let crust = crustPizza.value
-  let deliveryitem = deliveryItems.value;
-  let pizza = new Pizza(name, email, size, crust ,deliveryitem);
+  let crust = crustPizza.value;
+  let deliveryitem = deliveryItems.checked;
+  let numQuantityItem = numQuantityItems.value
+  // let deliveryitemClicked = Boolean.prototype.toString()
+  // console.log(deliveryitemClicked)
+  // deliveryitem= new Boolean(deliveryitem) 
+  // objects of the class
+  let pizza = new Pizza(name, email, size, crust, deliveryitem);
+  // output
   console.log(`Customer Name: ${pizza.customerName}
   customer Email: ${pizza.customerEmail}
   Pizza Size: ${pizza.pizzaSize}
   Pizza Crust: ${pizza.pizzaCrust}
-  Total Price: ${pizza.getTotalPrice(200, 100, 2)}`);
+  Total Price: ${pizza.getTotalPrice(200, 100, numQuantityItem)}
+  Delivery: ${deliveryitem}`);
+  
+  // console.log(pizza.quantityChange(numQuantityItem))
 });
+
