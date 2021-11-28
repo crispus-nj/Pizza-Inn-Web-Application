@@ -29,6 +29,16 @@ class Pizza {
       }
     }
   }
+  quantityChange(event){
+    let inputNum = document.getElementById('numQuantity')
+    let input = inputNum.value
+    input = event.target
+    // event.target
+    if(isNaN(input) || input <= 0){
+      input = 1
+    }
+    this.getTotalPrice()
+  }
 }
 
 let pizza = new Pizza("Crispus Njenga","engineer@gmail.com" ,"medium", true);

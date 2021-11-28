@@ -1,3 +1,6 @@
+body {
+    background-color: hsl(210, 36%, 96%);
+}
 .brand-image {
     height: 2.5rem;
     border-radius: 50%;
@@ -28,4 +31,10 @@ li {
     color: black;
     font-family: inherit;
     font-size: 1.3rem;
+}
+.btn-danger {
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

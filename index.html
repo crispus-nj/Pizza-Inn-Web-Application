@@ -58,9 +58,9 @@
             </div>
         </div>
         <!-- form actions -->
-        <form action="">
+        <!-- <form action="">
             <div class="row">
-               
+
             </div>
             <div class="row d-flex justify-content-center align-items-center  mt-3">
                 <div class="col-md-5 mt-2">
@@ -91,13 +91,13 @@
                 </div>
                 <div class="col-md-5 mt-3">
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="delivery" checked>
+                        <input type="checkbox" class="form-check-input" id="delivery" >
                         <label for="delivery" class="form-chak-label"><span class="header">Delivery</span> </label>
                     </div>
                 </div>
                 <div class="col-md-5 mt-3">
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="toppings" checked>
+                        <input type="checkbox" class="form-check-input" id="toppings" >
                         <label for="toppings" class="form-chak-label"><span class="header">Toppings</span> </label>
                     </div>
                 </div>
@@ -105,7 +105,59 @@
                     <button type="submit" class="btn btn-danger" style="font-weight: bold;">Proceed To Checkout</button>
                 </div>
             </div>
-        </form>
+        </form> -->
+        <!-- place your order -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <h3 class="header">Place Your Order</h3>
+            </div>
+        </div>
+        <div class="row  mt-3 ">
+            <div class="col-md-3 ">
+                <label for="size" class="header1">Size</label>
+                <select name="quantity" id="quantity" class="form-control">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="crust" class="header1">Crust</label>
+                <select name="crust" id="crust" class="form-control">
+                    <option value="crispy">Crispy</option>
+                    <option value="stuffed">Stuffed</option>
+                    <option value="glutte">Glutte-Free</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <label for="quantity" class="header1">Quantity</label>
+                <input type="number" name="numQuantity" id="numQuantity" value="1" class="form-control">
+            </div>
+            <div class="col-md-1">
+                <label for="toppings" class="header1">Toppings</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="toppings">
+                    <label for="toppings" class="form-chak-label">Toppings</label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <label for="delivery" class="header1">Delivery</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="delivery" >
+                    <label for="delivery" class="form-chak-label">Delivery</label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <label for="price" class="header1" style="color: brown;">Price</label>
+                <h5>Ksh <span>0</span></h5>
+                <!-- <span>0</span> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <button type="submit" class="btn btn-danger">Proceed To Checkout</button>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
