@@ -20,7 +20,7 @@ This is a web application where a one can order Pizza online. The can Add flavou
 
 ## Setup Process
 
-* [Click here]() to access the site.access the site using any browser of choice.
+* [Click here](https://engineer237.github.io/Pizza-Inn-Web-Application/) to access the site.access the site using any browser of choice.
 * To run the site locally simply follow the following:
     1. git clone 
     2. In the folder, run index.html file in the browser of choice.
