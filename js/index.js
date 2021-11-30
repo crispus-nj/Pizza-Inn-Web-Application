@@ -10,7 +10,6 @@ let crustPizza = document.getElementById("crust");
 let numQuantityItems = document.getElementById('numQuantity')
 let display = document.getElementById("confirm")
 let totalPricePizza = document.getElementById('totalPrice')
-// console.log(price)
 
 // globa variable with values from the input fields
 
@@ -51,17 +50,6 @@ class Pizza {
       }
     }
   }
-  // quantityChange(event) {
-  //   let inputNum = document.getElementById("numQuantity");
-  //   let input = inputNum.value;
-  //   input = event.target;
-  //   console.log(input)
-  //   // event.target
-  //   if (isNaN(input) || input <= 0) {
-  //     input = 1;
-  //   }
-  //   this.getTotalPrice();
-  // }
 }
 btn.addEventListener("click", function () {
   let name = nameCustomer.value;
@@ -133,13 +121,14 @@ btn.addEventListener("click", function () {
 });
 
 $(document).ready(function(){
-  let orderPizza = new Pizza(name, email, size, crust, deliveryitem)
-  $('#confirmOrder').click(function(){
-    alert(`Pizza Size: ${orderPizza.size}
-    Pizza Crust: ${orderPizza.crust}
-    Delivery: ${orderPizza.deliveryitem}
-    Total Price: ${orderPizza.getTotalPrice(200, 100, numQuantityItem)}
-    `)
+  $('#orderImg').hover(function(){
+    $('#order').toggle(800)
+  })
+  $('#priceImg').hover(function(){
+    $('#price').toggle(800)
+  })
+  $('#responseImg').hover(function(){
+    $('#response').toggle(800)
   })
 })
 

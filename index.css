@@ -56,6 +56,11 @@ li {
     width: 8rem;
     height: 8rem;
 }
+#order,
+#response, 
+#price {
+display: none;
+}
 .customer-img {
     width: 10rem;
     height: 10rem;
