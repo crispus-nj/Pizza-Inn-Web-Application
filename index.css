@@ -49,3 +49,15 @@ li {
     justify-content: space-between;
     align-items: center;
 }
+/* #services {
+    background-color: #cacaca;
+} */
+.services-offered {
+    width: 8rem;
+    height: 8rem;
+}
+.customer-img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
