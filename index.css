@@ -5,6 +5,16 @@ body {
     height: 2.5rem;
     border-radius: 50%;
 }
+#pizza-bg {
+    background-image: url(./images/bgPizza.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+}
+#image-pizza {
+    display: none;
+}
 .header {
     text-align: center;
     font-weight: bold;
