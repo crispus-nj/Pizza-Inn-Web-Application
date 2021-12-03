@@ -58,8 +58,11 @@ btn.addEventListener("click", function () {
   let crust = crustPizza.value;
   let deliveryitem = deliveryItems.checked;
   let numQuantityItem = numQuantityItems.value;
-  if (!name || !email) {
-    $("#error").text("** please input your details!! 🙂**");    
+  if (!name) {
+    $("#error").text("** please input your name!! 🙂**");    
+    return;
+  }else if(!email){
+    $("#errorEmail").text("** please input your email!! 🙂**");   
     return;
   } else {
     $("#error").text("");
