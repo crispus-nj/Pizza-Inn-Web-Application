@@ -59,7 +59,7 @@ btn.addEventListener("click", function () {
   let deliveryitem = deliveryItems.checked;
   let numQuantityItem = numQuantityItems.value;
   if (!name || !email) {
-    $("#error").text("** please input your details!! 🙂**");
+    $("#error").text("** please input your details!! 🙂**");    
     return;
   } else {
     $("#error").text("");
